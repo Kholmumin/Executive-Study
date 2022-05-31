@@ -1,3 +1,51 @@
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('../fonts/roboto-v30-latin-regular.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin-regular.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-500 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 500;
+    src: local(''),
+        url('../fonts/roboto-v30-latin-500.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin-500.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-700 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+        url('../fonts/roboto-v30-latin-700.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin-700.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+/* roboto-900 - latin */
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''),
+        url('../fonts/roboto-v30-latin-900.woff2') format('woff2'),
+        /* Chrome 26+, Opera 23+, Firefox 39+ */
+        url('../fonts/roboto-v30-latin-900.woff') format('woff');
+    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+
 * {
     box-sizing: border-box;
 }
@@ -52,6 +100,8 @@ body {
     border: 2px solid transparent;
 }
 
+
+
 .header-link:hover {
     border-bottom-color: #717CFF;
     transition: 0.2s all ease-in;
@@ -75,6 +125,15 @@ body {
     background-position: calc(50% + 652px) calc(50% + 138px);
     background-repeat: no-repeat;
     background-size: contain;
+}
+
+.hero-link::after {
+
+    content: "";
+    width: 28px;
+    height: 16px;
+    background-image: url(../images/arrow.svg);
+    background-repeat: no-repeat;
 }
 
 
@@ -106,7 +165,8 @@ body {
 
 .hero-link {
     display: flex;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-between;
     width: 262px;
     margin-bottom: 104px;
     padding-top: 12px;
@@ -199,6 +259,34 @@ body {
     border-radius: 15px;
 }
 
+.service-item::before {
+    display: block;
+    content: "";
+    width: 76px;
+    height: 76px;
+    margin-bottom: 30px;
+}
+
+.service-item:nth-child(1)::before {
+    background-image: url(../images/councelling.svg);
+}
+
+.service-item:nth-child(2)::before {
+    background-image: url(../images/admission.svg);
+}
+
+.service-item:nth-child(3)::before {
+    background-image: url(../images/consalting.svg);
+}
+
+.service-item:nth-child(4)::before {
+    background-image: url(../images/home.svg);
+}
+
+.service-item:nth-child(5)::before {
+    background-image: url(../images/airplane.svg);
+}
+
 .service-left-item {
     margin-right: 0;
 }
@@ -211,9 +299,9 @@ body {
     width: 296px;
 }
 
-.service-img {
+/* .service-img {
     margin-bottom: 30px;
-}
+} */
 
 .service-item-heading {
     margin: 0;
@@ -289,10 +377,21 @@ body {
 }
 
 .news-text {
+    display: flex;
     margin: 0;
     font-weight: 900;
     line-height: 19px;
     color: #565656;
+}
+
+.news-text::before {
+    content: "";
+    display: block;
+    width: 21px;
+    height: 21px;
+    margin-right: 12px;
+    background-image: url(../images/icon.svg);
+    background-repeat: no-repeat;
 }
 
 .news-box-heading {
@@ -427,6 +526,7 @@ body {
 
 .learn-link {
     margin-right: 20px;
+    /* padding-right: 40px; */
     text-decoration: none;
     font-weight: 700;
     font-size: 17px;
@@ -435,8 +535,28 @@ body {
     color: #717CFF;
 }
 
+.learn-box::after {
+    display: block;
+    margin-bottom: -9px;
+    width: 24px;
+    height: 24px;
+    background-image: url(../images/arrow.svg);
+    background-repeat: no-repeat;
+    content: "";
+}
+
 .time-text-box {
     display: flex;
+    align-items: center;
+}
+
+.time-text-box::before{
+    width: 24px;
+    height: 24px;
+    
+    background-image: url(../images/time.svg);
+    background-repeat: no-repeat;
+    content: "";
 }
 
 .time-text {
