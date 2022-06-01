@@ -122,13 +122,15 @@ body {
     padding-top: 76px;
     background-color: #F2F2F2;
     background-image: url(../images/backimg.png);
-    background-position: calc(50% + 652px) calc(50% + 138px);
+    background-position: calc(50% + 652px) calc(50% + 109px);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: 1030px;
 }
 
 .hero-link::after {
-
+    position: absolute;
+    top: 25px;
+    right: 32px;
     content: "";
     width: 28px;
     height: 16px;
@@ -164,15 +166,15 @@ body {
 }
 
 .hero-link {
-    display: flex;
+    position: relative;
+    display: inline-block;
     align-items: center;
     justify-content: space-between;
-    width: 262px;
     margin-bottom: 104px;
     padding-top: 12px;
-    padding-right: 24px;
+    padding-right: 90px;
     padding-bottom: 12px;
-    padding-left: 34px;
+    padding-left: 19px;
     font-size: 22px;
     line-height: 40px;
     color: #FFFFFF;
@@ -723,6 +725,7 @@ body {
 }
 
 .dream-link {
+
     margin-bottom: 0;
 }
 
